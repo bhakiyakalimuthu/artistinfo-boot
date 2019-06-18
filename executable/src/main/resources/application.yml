@@ -1,0 +1,47 @@
+info:
+  name: @project.name@
+  version: @project.version@
+
+
+request:
+  baseurl:
+    musicbrainz: http://musicbrainz.org/ws/2/
+    coverartarchive: http://coverartarchive.org/
+    discogs: https://api.discogs.com/
+  discogs:
+    key: uqQxwGdFjhFrEaiueFsk
+    secret: SYRDdKjFbAIfuwGThSucmekJUidmFUIn
+
+threadpool:
+  size: 25
+  capacity: 500
+  prefix: ArtistInroThread-
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
+
+  spring:
+    application:
+      name: ArtistinfoBoot
+
+  eureka:
+    client:
+      register-with-eureka: false
+      fetch-registry: false
+      serviceUrl:
+        defaultZone: http://localhost:9091/eureka/
+#server:
+#  port: 8761
+
+
+retry:
+  numberofretry: 4
+  backofftime: 200
+
+ratelimit:
+  requestpersecond: 5
+
