@@ -7,6 +7,7 @@ import com.viaplay.serviceapi.util.validator.UUIDConstrain;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -37,6 +38,7 @@ public class MbidInfoResource {
      * @return Response entity of Artistinformation and coverart albums and profiles
      */
     @GetMapping("/info/{mbid}")
+    @Cacheable(value = "response")
     @ApiOperation(value = "Get Music artist information for a given MBID")
     public ResponseEntity<MbidInfo> getMbidInfo(@UUIDConstrain  @PathVariable(value = "mbid")
                                             String mbid){

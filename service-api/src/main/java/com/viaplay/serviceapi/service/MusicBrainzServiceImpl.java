@@ -39,7 +39,6 @@ public class MusicBrainzServiceImpl implements MusicBrainzService{
     @Override
     @Retryable(value = {
             HttpClientErrorException.class, HttpStatusCodeException.class, RestClientException.class}, maxAttempts = 4, backoff = @Backoff(200))
-    @Cacheable(value = "artist")
     public MusicBrainzResponse getArtistInfo(UriComponents uri) {
         return makeRequest(uri);
     }

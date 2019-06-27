@@ -34,7 +34,6 @@ public class DiscogsServiceImpl implements DiscogsService {
     }
 
     @Override
-    @Cacheable(value = "profile")
     public DiscogsResponse getDiscogsProfile(UriComponents uri, HttpEntity<String> header) {
         return makeRequest(uri, header);
     }

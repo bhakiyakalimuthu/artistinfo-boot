@@ -42,7 +42,6 @@ public class CoverArtServiceImpl implements CoverArtService{
 
     @Override
     @Async("threadPoolTaskExecutor")
-    @Cacheable(value = "coverart")
     public CompletableFuture<CoverArtResponse> getCoverArt(UriComponents uri) {
         return makeRequest(uri);
     }
