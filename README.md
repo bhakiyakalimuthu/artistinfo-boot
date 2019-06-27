@@ -74,27 +74,3 @@ Ex: http://localhost:8080/service-api/v1/info/f27ec8db-af05-4f36-916e-3d57f91ecf
  )
         
 
-
-# Abstract Vehicle State Machine
-Package contains a implementaion of State transition for a abstract vehicle.
-State transitions are performed based on the user roles.
-
-#User roles
-- 1. End­users ­ Regular app­users / riders.
-- 2. Hunters ­ End users who have signed up to be chargers of vehicles and are responsible for
-- 	picking up low battery vehicles.
-- 3. Admins ­ Super users who can do everything
-#Valid states
-- Operational statutes
-- 1. Ready ­ The vehicle is operational and can be claimed by an end­user
-- 2. Battery_low ­ The vehicle is low on battery but otherwise operational. The vehicle cannot be
-- claimed by an end­user but can be claimed by a hunter.
-- 3. Bounty ­ Only available for “Hunters” to be picked up for charging.
-- 4. Riding ­ An end user is currently using this vehicle; it can not be claimed by another user or hunter.
-- 5. Collected ­ A hunter has picked up a vehicle for charging.
-- 6. Dropped ­ A hunter has returned a vehicle after being charged.
-#Not commissioned for service , not claimable by either end­users nor hunters.
-- 7. Service_mode
-- 8. Terminated
-- 9. Unknown
-
