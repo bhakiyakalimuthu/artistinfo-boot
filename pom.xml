@@ -18,7 +18,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<mockito.version>1.10.19</mockito.version>
 		<application.workdir>application</application.workdir>
 	</properties>
